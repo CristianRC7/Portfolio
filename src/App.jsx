@@ -61,7 +61,7 @@ export default function App() {
       <div className="bg-gradient-to-br from-blue-100 via-purple-100 to-gray-100 dark:from-blue-900 dark:via-purple-900 dark:to-black text-gray-900 dark:text-white">
         <nav className="bg-white dark:bg-gray-800 shadow-md">
           <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" className="text-xl font-bold">Mi Portfolio</a>
+            <a href="#" className="text-xl font-bold">Cristian R.</a>
             <div className="flex items-center space-x-4">
               <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
               <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
