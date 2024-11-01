@@ -14,8 +14,7 @@ function About() {
         <p className="mb-4">Soy un desarrollador apasionado por la creación de soluciones innovadoras...</p>
         <h3 className="text-xl font-semibold mb-2">Estudios</h3>
         <ul className="list-disc list-inside">
-          <li>Grado en Ingeniería Informática - Universidad XYZ</li>
-          <li>Máster en Desarrollo Web - Instituto ABC</li>
+          <li>Ingeniería de Sistemas - Universidad UTEPSA</li>
         </ul>
       </div>
     </section>
