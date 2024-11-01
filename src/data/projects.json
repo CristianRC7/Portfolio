@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "UTEPSA JETS",
+      "description": "Se realizo la pagina web de la universidad UTEPSA JETS para la gestion 2023.",
+      "image": "/placeholder.svg?height=200&width=300",
+      "technologies": ["html", "css"]
+    },
+    {
+      "id": 2,
+      "title": "Aplicación Móvil de Fitness",
+      "description": "Una app móvil para seguimiento de ejercicios, nutrición y progreso personal.",
+      "image": "/placeholder.svg?height=200&width=300",
+      "technologies": ["react-native", "firebase"]
+    },
+    {
+      "id": 3,
+      "title": "Sistema de Gestión de Contenidos",
+      "description": "Un CMS personalizado para la gestión de blogs y sitios web dinámicos.",
+      "image": "/placeholder.svg?height=200&width=300",
+      "technologies": ["php", "mysql", "jquery"]
+    }
+  ]
+  

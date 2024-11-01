@@ -1,35 +1,17 @@
-import { useState } from 'react'
-import { Moon, Sun, Code, Database, Globe, Smartphone, Server, Cpu, X } from 'lucide-react'
-
+import { useState, useEffect } from 'react'
+import { Moon, Sun, Code, Database, Globe, Smartphone, Server, Cpu, X, Menu } from 'lucide-react'
 import Profile from './assets/perfil.png'
+import projectsData from './data/projects.json'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false)
   const [selectedProject, setSelectedProject] = useState(null)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [projects, setProjects] = useState([])
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Aplicación Web de Comercio Electrónico',
-      description: 'Una plataforma de comercio electrónico completa con carrito de compras, pagos y gestión de pedidos.',
-      image: '/placeholder.svg?height=200&width=300',
-      technologies: ['react', 'node', 'mongodb']
-    },
-    {
-      id: 2,
-      title: 'Aplicación Móvil de Fitness',
-      description: 'Una app móvil para seguimiento de ejercicios, nutrición y progreso personal.',
-      image: '/placeholder.svg?height=200&width=300',
-      technologies: ['react-native', 'firebase']
-    },
-    {
-      id: 3,
-      title: 'Sistema de Gestión de Contenidos',
-      description: 'Un CMS personalizado para la gestión de blogs y sitios web dinámicos.',
-      image: '/placeholder.svg?height=200&width=300',
-      technologies: ['php', 'mysql', 'jquery']
-    },
-  ]
+  useEffect(() => {
+    setProjects(projectsData)
+  }, [])
 
   const skills = [
     { name: 'JavaScript', icon: <Code className="w-6 h-6" /> },
@@ -56,16 +38,22 @@ export default function App() {
     document.documentElement.classList.toggle('dark')
   }
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
   return (
     <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
       <div className="bg-gradient-to-br from-blue-100 via-purple-100 to-gray-100 dark:from-blue-900 dark:via-purple-900 dark:to-black text-gray-900 dark:text-white">
         <nav className="bg-white dark:bg-gray-800 shadow-md">
           <div className="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" className="text-xl font-bold">Cristian R.</a>
-            <div className="flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-4">
               <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
               <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
               <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400">Habilidades</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              {/* Dark Mode Toggle */}
               <div className="flex items-center space-x-2">
                 <Sun className="w-4 h-4" />
                 <div
@@ -73,21 +61,37 @@ export default function App() {
                   className="w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 cursor-pointer"
                 >
                   <div
-                    className={`bg-white dark:bg-gray-800 w-4 h-4 rounded-full shadow-md transform ${darkMode ? 'translate-x-6' : ''
-                      } transition-transform duration-300`}
+                    className={`bg-white dark:bg-gray-800 w-4 h-4 rounded-full shadow-md transform ${darkMode ? 'translate-x-6' : ''} transition-transform duration-300`}
                   ></div>
                 </div>
                 <Moon className="w-4 h-4" />
               </div>
+
+              {/* Responsive Toggle Button (Only Visible on Small Screens) */}
+              <button
+                onClick={toggleMenu}
+                className="block md:hidden focus:outline-none text-gray-700 dark:text-white"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+
+          {/* Navigation Links for Small Screens */}
+          <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'}`}>
+            <div className="flex flex-col items-center bg-white dark:bg-gray-800 p-4">
+              <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
+              <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
+              <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400">Habilidades</a>
             </div>
           </div>
         </nav>
 
         <main className="container mx-auto px-6 py-8">
           <section id="about" className="mb-12 flex flex-col md:flex-row items-center">
-          <img
+            <img
               src={Profile}
-              alt="Tu foto"
+              alt="foto de perfil"
               className="rounded-full w-48 h-48 object-cover mb-6 md:mb-0 md:mr-8"
             />
             <div>
@@ -157,13 +161,12 @@ export default function App() {
                   <X className="h-5 w-5" />
                 </button>
               </div>
-              <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg mb-4" />
               <p className="mb-4">{selectedProject.description}</p>
-              <div className="flex gap-2">
-                {selectedProject.technologies.map((tech) => (
-                  <span key={tech} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded flex items-center">
-                    {techIcons[tech]}
-                    <span className="ml-1">{tech}</span>
+              <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-60 object-cover rounded-lg mb-4" />
+              <div className="flex space-x-2">
+                {selectedProject.technologies.map((tech, index) => (
+                  <span key={index} className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                    {tech}
                   </span>
                 ))}
               </div>
