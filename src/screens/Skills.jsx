@@ -1,5 +1,5 @@
 import { FaJs, FaHtml5, FaPhp, FaReact, FaCss3 } from 'react-icons/fa';
-import { SiCsharp, SiReact, SiMysql, SiExpo, SiTailwindcss } from 'react-icons/si';
+import { SiReact, SiMysql, SiExpo, SiTailwindcss } from 'react-icons/si';
 
 function Skills() {
   const skills = [
@@ -10,9 +10,8 @@ function Skills() {
     { name: 'React', icon: <FaReact className="w-8 h-8 text-blue-500" /> },
     { name: 'React Native', icon: <SiReact className="w-8 h-8 text-blue-400" /> },
     { name: 'Expo', icon: <SiExpo className="w-8 h-8 text-black" /> },
-    { name: 'C#', icon: <SiCsharp className="w-8 h-8 text-purple-600" /> },
-    { name: 'MySQL', icon: <SiMysql className="w-8 h-8 text-blue-700" /> },
     { name: 'PHP', icon: <FaPhp className="w-8 h-8 text-indigo-600" /> },
+    { name: 'MySQL', icon: <SiMysql className="w-8 h-8 text-blue-700" /> },
   ];
 
   return (
