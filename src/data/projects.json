@@ -1,26 +1,27 @@
 [
   {
     "id": 1,
-    "title": "Pagina JETS 2023",
-    "description": "Se realizó la página web de la universidad UTEPSA JETS para la gestión 2023.",
+    "title": "Página JETS 2023",
+    "description": "Desarrollo de una plataforma web para la Universidad UTEPSA, dedicada a las JETS (Jornadas Empresariales, Tecnológicas y Sociales). Esta página, construida con HTML, CSS y JavaScript, proporciona a los estudiantes información sobre conferencias, foros, actividades lúdicas y convocatorias durante los cuatro días del evento, facilitando así su participación y acceso a contenidos relevantes.",
     "image": "/placeholder.svg?height=200&width=300",
     "technologies": ["html", "css", "js"],
     "link": "https://www.utepsa.edu/jets/2023/"
   },
   {
     "id": 2,
-    "title": "Aplicación Móvil de Fitness",
-    "description": "Una app móvil para seguimiento de ejercicios, nutrición y progreso personal.",
-    "image": "/placeholder.svg?height=200&width=300",
-    "technologies": ["react-native", "firebase"],
-    "link": "https://ejemplo.com/app-fitness"
+    "title": "URBACAR WhatsApp-Bot",
+    "description": "Desarrollado en Python y desplegado en Glitch, este bot de WhatsApp utiliza la API de Meta para proporcionar una interacción fluida con los clientes. Su propósito principal es mantener a los clientes informados sobre las últimas ofertas de URBACAR, así como brindar información sobre urbanizaciones, redes sociales, y la posibilidad de agendar visitas. Además, el bot permite a los usuarios contactar directamente con personal de la empresa y localizar las oficinas de URBACAR de manera rápida y eficiente.",
+    "image": "../assets/projectsImages/urbacar.jpg",
+    "technologies": ["python", "whatsapp-api", "glitch"],
+    "link": "https://api.whatsapp.com/send?phone=59167800870&text=Hola"
   },
   {
     "id": 3,
-    "title": "Sistema de Gestión de Contenidos",
-    "description": "Un CMS personalizado para la gestión de blogs y sitios web dinámicos.",
+    "title": "JETS APP",
+    "description": "Aplicación móvil desarrollada en Expo React Native con backend en PHP, diseñada para estudiantes y administradores de los JETS. Esta plataforma permite a los estudiantes mantenerse informados sobre actividades lúdicas, conferencias y fotos, con la opción de calificar cada evento. Incluye un sistema de códigos QR únicos para confirmar asistencia y un apartado de certificados de participación. El modo administrador cuenta con un lector de QR para facilitar el registro y la gestión de usuarios y eventos.",
     "image": "/placeholder.svg?height=200&width=300",
     "technologies": ["php", "mysql", "jquery"],
-    "link": "https://ejemplo.com/cms"
+    "link": "https://github.com/CristianRC7/EventsApp.git"
   }
+  
 ]
