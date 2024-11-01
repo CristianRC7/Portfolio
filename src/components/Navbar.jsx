@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import { Menu, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 
 function Navbar({ toggleDarkMode, darkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-md">
@@ -25,15 +26,15 @@ function Navbar({ toggleDarkMode, darkMode }) {
             <Moon className="w-4 h-4" />
           </div>
           <button onClick={toggleMenu} className="block md:hidden focus:outline-none text-gray-700 dark:text-white">
-            <Menu className="w-6 h-6" />
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
       {menuOpen && (
         <div className="md:hidden flex flex-col items-center bg-white dark:bg-gray-800 p-4">
-          <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
-          <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
-          <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400">Habilidades</a>
+          <a href="#about" onClick={closeMenu} className="hover:text-blue-600 dark:hover:text-blue-400">Sobre mí</a>
+          <a href="#projects" onClick={closeMenu} className="hover:text-blue-600 dark:hover:text-blue-400">Proyectos</a>
+          <a href="#skills" onClick={closeMenu} className="hover:text-blue-600 dark:hover:text-blue-400">Habilidades</a>
         </div>
       )}
     </nav>
