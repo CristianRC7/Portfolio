@@ -12,7 +12,7 @@ function ProjectModal({ project, onClose }) {
           </button>
         </div>
         <p className="mb-4">{project.description}</p>
-        <img src={project.image} alt={project.title} className="w-full h-60 object-cover rounded-lg mb-4" />
+        {/*<img src={project.image} alt={project.title} className="w-full h-60 object-cover rounded-lg mb-4" /> */}
         <div className="mb-4">
           <h4 className="text-lg font-semibold">Tecnologías:</h4>
           <div className="flex space-x-2">
