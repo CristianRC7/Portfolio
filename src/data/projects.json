@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Página Diario Zona Norte",
     "description": "Desarrollo de una plataforma de noticias para el Diario Zona Norte, un medio de comunicación de la provincia de Montero. Construida en WordPress con personalización en CSS, la página presenta un diseño dinámico y adaptable que permite al diario compartir noticias y contenido multimedia.",
-    "image": "https://i.postimg.cc/1XLDfPVB/diariozonanorte-laptop.png",
+    "image": "https://i.postimg.cc/nVd4B94z/diariozonanorte-card.png",
     "technologies": ["wordpress", "css"],
     "link": "https://diariozonanorte.com.bo/"
   }
