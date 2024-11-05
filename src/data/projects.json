@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Página JETS 2023",
     "description": "Desarrollo de una página web para la Universidad UTEPSA, dedicada a las JETS (Jornadas Empresariales, Tecnológicas y Sociales). Esta página, construida con HTML, CSS y JavaScript, proporciona a los estudiantes información sobre conferencias, foros, actividades lúdicas y convocatorias durante los cuatro días del evento, facilitando así su participación y acceso a contenidos relevantes.",
-    "image": "https://i.postimg.cc/vmNttFsj/httpwww-utepsa-edujets2023.png",
+    "image": "https://i.postimg.cc/vmNttFsj/jets-card.png",
     "technologies": ["html", "css", "js"],
     "link": "https://www.utepsa.edu/jets/2023/"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "URBACAR WhatsApp-Bot",
     "description": "Desarrollado en Python y desplegado en Glitch, este bot de WhatsApp utiliza la API de Meta para proporcionar una interacción fluida con los clientes. Su propósito principal es mantener a los clientes informados sobre las últimas ofertas de URBACAR, así como brindar información sobre urbanizaciones, redes sociales, y la posibilidad de agendar visitas.",
-    "image": "https://i.postimg.cc/7Zh3Ptcb/urbacar.jpg",
+    "image": "https://i.postimg.cc/bJD6W0Hm/urbacar.png",
     "technologies": ["python", "meta-api"],
     "link": "https://api.whatsapp.com/send?phone=59167800870&text=Hola"
   },
