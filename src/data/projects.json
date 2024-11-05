@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Página JETS 2023",
     "description": "Desarrollo de una página web para la Universidad UTEPSA, dedicada a las JETS (Jornadas Empresariales, Tecnológicas y Sociales). Esta página, construida con HTML, CSS y JavaScript, proporciona a los estudiantes información sobre conferencias, foros, actividades lúdicas y convocatorias durante los cuatro días del evento, facilitando así su participación y acceso a contenidos relevantes.",
-    "image": "https://i.postimg.cc/7Zh3Ptcb/urbacar.jpg",
+    "image": "https://i.postimg.cc/vmNttFsj/httpwww-utepsa-edujets2023.png",
     "technologies": ["html", "css", "js"],
     "link": "https://www.utepsa.edu/jets/2023/"
   },
@@ -21,7 +21,7 @@
     "description": "Aplicación móvil desarrollada en Expo React Native con backend en PHP, diseñada para estudiantes y administradores de los JETS. Esta plataforma permite a los estudiantes mantenerse informados sobre actividades lúdicas, conferencias y fotos, con la opción de calificar cada evento.",
     "image": "https://i.postimg.cc/7Zh3Ptcb/urbacar.jpg",
     "technologies": ["react native", "php"],
-    "link": "https://github.com/CristianRC7/EventsApp.git"
+    "link": "https://github.com/CristianRC7/JETS-App"
   },
   {
     "id": 4,

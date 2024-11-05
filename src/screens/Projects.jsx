@@ -1,30 +1,44 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import { Eye } from 'lucide-react';
 import projectsData from '../data/projects.json';
 
 function Projects({ setSelectedProject }) {
   return (
-    <section id="projects" className="mb-12">
-      <h2 className="text-3xl font-bold mb-6 text-center">Proyectos</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section id="projects" className="py-16 px-4">
+      <h2 className="text-4xl font-bold mb-12 text-center">Mis Proyectos</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg overflow-hidden"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl cursor-pointer"
+            whileHover={{ y: -5 }}
             onClick={() => setSelectedProject(project)}
           >
-            <motion.h3 className="text-2xl font-semibold mb-2 text-center">{project.title}</motion.h3>
-            <motion.img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-60 object-cover rounded-lg mb-4"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
-            />
-            <div className="text-center text-blue-600 font-bold cursor-pointer hover:underline">
-              Ver detalles
+            <div className="relative aspect-video">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-semibold text-lg flex items-center gap-2">
+                  <Eye className="w-5 h-5" /> Ver Detalles
+                </span>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                  <span 
+                    key={index}
+                    className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full dark:bg-blue-900 dark:text-blue-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}
