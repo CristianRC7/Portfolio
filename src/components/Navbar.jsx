@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 function Navbar({ toggleDarkMode, darkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,9 +36,30 @@ function Navbar({ toggleDarkMode, darkMode }) {
       <div className="container mx-auto px-8 py-4 flex justify-between items-center"> 
         <a href="#" className="text-2xl font-bold">Cristian R.</a> 
         <div className="hidden md:flex items-center space-x-6"> 
-          <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105">Sobre mí</a>
-          <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105">Proyectos</a>
-          <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105">Habilidades</a>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            Sobre mí
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            Proyectos
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            Habilidades
+          </Link>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
@@ -66,9 +88,33 @@ function Navbar({ toggleDarkMode, darkMode }) {
           variants={menuVariants}
           className="md:hidden flex flex-col items-center bg-white dark:bg-gray-800 p-4"
         >
-          <a href="#about" onClick={closeMenu} className="text-lg py-2 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105">Sobre mí</a>
-          <a href="#projects" onClick={closeMenu} className="text-lg py-2 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105">Proyectos</a>
-          <a href="#skills" onClick={closeMenu} className="text-lg py-2 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105">Habilidades</a>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            className="text-lg py-2 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            Sobre mí
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            className="text-lg py-2 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            Proyectos
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            className="text-lg py-2 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 transform hover:scale-105 cursor-pointer"
+          >
+            Habilidades
+          </Link>
         </motion.div>
       )}
     </nav>
