@@ -25,7 +25,7 @@ export default function App() {
       <div className="bg-gradient-to-br from-blue-100 via-purple-100 to-gray-100 dark:from-blue-900 dark:via-purple-900 dark:to-black text-gray-900 dark:text-white">
         <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         
-        <main className="container mx-auto px-6 py-8 pt-20"> 
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8"> 
           <About />
           <Projects projects={projectsData} setSelectedProject={setSelectedProject} />
           <Skills />
