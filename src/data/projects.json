@@ -4,7 +4,7 @@
     "title": "Página JETS 2023",
     "description": "Desarrollo de una página web para la Universidad UTEPSA, dedicada a las JETS (Jornadas Empresariales, Tecnológicas y Sociales). Esta página, construida con HTML, CSS y JavaScript, proporciona a los estudiantes información sobre conferencias, foros, actividades lúdicas y convocatorias durante los cuatro días del evento, facilitando así su participación y acceso a contenidos relevantes.",
     "image": "https://i.postimg.cc/vmNttFsj/jets-card.png",
-    "technologies": ["html", "css", "js"],
+    "technologies": ["html", "js", "css"],
     "link": "https://www.utepsa.edu/jets/2023/"
   },
   {

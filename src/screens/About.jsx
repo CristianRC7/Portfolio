@@ -18,9 +18,6 @@ function About() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
             Cristian Ramírez
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-600 dark:text-blue-400">
-            Desarrollador Web
-          </h2>
           <p className="mb-6 text-gray-700 dark:text-gray-300 text-lg">
             Soy un desarrollador apasionado por la tecnología y la creación de soluciones innovadoras. Me especializo en el desarrollo de aplicaciones web y móviles, combinando funcionalidad, diseño y experiencia de usuario intuitiva.
           </p>
