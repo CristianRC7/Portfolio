@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "title": "URBACAR WhatsApp-Bot",
+    "title": "WhatsApp-Bot",
     "description": "Desarrollado en Python y desplegado en Glitch, este bot de WhatsApp utiliza la API de Meta para proporcionar una interacción fluida con los clientes. Su propósito principal es mantener a los clientes informados sobre las últimas ofertas de URBACAR, así como brindar información sobre urbanizaciones, redes sociales, y la posibilidad de agendar visitas.",
     "image": "https://i.postimg.cc/bJD6W0Hm/urbacar.png",
     "technologies": ["python", "meta-api"],
@@ -17,9 +17,9 @@
   },
   {
     "id": 3,
-    "title": "JETS APP",
+    "title": "JETS App",
     "description": "Aplicación móvil desarrollada en Expo React Native con backend en PHP, diseñada para estudiantes y administradores de los JETS. Esta plataforma permite a los estudiantes mantenerse informados sobre actividades lúdicas, conferencias y fotos, con la opción de calificar cada evento.",
-    "image": "https://i.postimg.cc/7Zh3Ptcb/urbacar.jpg",
+    "image": "https://i.postimg.cc/C5cQPbQx/jetsapp-card.png",
     "technologies": ["react native", "php"],
     "link": "https://github.com/CristianRC7/JETS-App"
   },
