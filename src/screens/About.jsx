@@ -1,8 +1,35 @@
-import { Eye } from 'lucide-react';
+import { Eye, Github, Linkedin, Facebook, Instagram } from 'lucide-react';
 import Profile from '../assets/perfil.png';
 import CV from '../assets/projectsImages/CV_CristianRamirez.pdf'
 
 function About() {
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: Github,
+      url: 'https://github.com/CristianRC7/',
+      color: 'hover:bg-gray-800'
+    },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: 'https://www.linkedin.com/in/cristian-ramirez7/',
+      color: 'hover:bg-blue-600'
+    },
+    {
+      name: 'Facebook',
+      icon: Facebook,
+      url: 'https://www.facebook.com/people/Cristian-David-Ramirez-Callejas/pfbid025xAwYY21vu6UphQmqD9mzQku8svhPWWGdcmD3CXT8J7Eo81Vovn2hgrtjzqYZpNYl/',
+      color: 'hover:bg-blue-500'
+    },
+    {
+      name: 'Instagram',
+      icon: Instagram,
+      url: 'https://www.instagram.com/cristian_rcxd/',
+      color: 'hover:bg-pink-600'
+    }
+  ];
+
   return (
     <section id="about" className="py-20 max-w-5xl mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between">
@@ -13,6 +40,21 @@ function About() {
             className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg" 
             style={{ objectPosition: 'top' }}
           />
+          {/* Social Media Links */}
+          <div className="mt-6 flex justify-center gap-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${social.color} hover:text-white group`}
+                aria-label={social.name}
+              >
+                <social.icon className="w-6 h-6 transition-transform group-hover:rotate-12" />
+              </a>
+            ))}
+          </div>
         </div>
         <div className="md:w-1/2">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
