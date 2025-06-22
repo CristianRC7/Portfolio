@@ -21,7 +21,7 @@ function Projects({ setSelectedProject }) {
                 alt={project.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-semibold text-lg flex items-center gap-2">
                   <Eye className="w-5 h-5" /> Ver Detalles
                 </span>
